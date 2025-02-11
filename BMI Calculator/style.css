@@ -1,56 +1,152 @@
 body {
-  background-color: aqua;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-#weight-guide {
-  position: absolute;
-  top: 60px;
-  right: 50px;
-}
-
+/* Heading */
 h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-top: 20px;
 }
 
+/* Input Labels */
+#height,
+#weight {
+  position: absolute;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Input Fields */
+#height1, #weight1 {
+  width: 250px;
+  padding: 10px;
+  border: 2px solid #74ebd5;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#height1:focus, #weight1:focus {
+  border-color: #57d4bf;
+  outline: none;
+}
+
+/* Button Styling */
 button {
   position: absolute;
-  left: 30px;
-  top: 175px;
-  padding: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
-  background-color: hotpink;
-  border: 2px solid black;
-  color: black;
-  border-radius: 1000px;
+  left: 20px;
+  top: 190px;
+  padding: 12px 50px;
+  background-color: #74ebd5;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#height  {
+button:hover {
+  background-color: #57d4bf;
+  transform: scale(1.05);
+}
+
+/* Results Box */
+#results {
+  color: #333;
   position: absolute;
+  top: 100px;
+  left: 300px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  width: 300px;
+  text-align: center;
+}
+
+/* Weight Guide */
+#weight-guide {
+  position: absolute;
+  top: 250px;
+  right: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  color: #444;
+}
+
+#weight-guide h3 {
+  margin-bottom: 10px;
+}
+
+#weight-guide ul {
+  list-style: none;
+  padding: 0;
+}
+
+#weight-guide li {
+  margin-bottom: 5px;
+}
+
+/* Position Adjustments */
+#height {
   top: 55px;
   left: 20px;
 }
-#weight  {
-  position: absolute;
+
+#weight {
   top: 110px;
   left: 20px;
 }
-#height1   {
-  position: absolute;
-  left: 20px;
-  height: 20px;
-  border: 2px solid black;
-  background-color: aquamarine;
-  border-radius: 5px;
+
+#height1 {
+  top: 75px;
 }
-#weight1   {
-  position: absolute;
-  left: 20px;
+
+#weight1 {
   top: 135px;
-  height: 20px;
-  border: 2px solid black;
-  background-color: aquamarine;
-  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #results {
+    position: static;
+    margin: 20px auto;
+    width: 80%;
+  }
+
+  #weight-guide {
+    position: static;
+    margin: 20px auto;
+    width: 80%;
+  }
+
+  button {
+    position: static;
+    margin: 20px auto;
+    display: block;
+  }
+
+  #height,
+  #weight,
+  #height1,
+  #weight1 {
+    position: static;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+  }
 }
