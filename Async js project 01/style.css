@@ -1,0 +1,48 @@
+body {
+    background-color: blueviolet;
+    color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#Text-1 {
+    color: #fff;
+}
+
+#btn-1, #btn-2 {
+    background-color: aqua;
+    border: none;
+    border-radius: 2rem;
+    padding: 1.3rem;
+    width: 8rem;
+    font-size: larger;
+    font-weight: 500;
+    cursor: pointer;  
+}
+
+#btn-2 {
+    position: absolute;
+    left: 15rem;
+}
+
+#parent {
+    width: 100%;  
+}
+
+#printed-text {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 1rem;        
+    width: 100%;      
+    margin-top: 2rem; 
+}
+
+
+#printed-text p {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    flex: 0 0 calc(20% - 1rem);  
+}
